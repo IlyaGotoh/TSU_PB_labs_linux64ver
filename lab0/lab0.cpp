@@ -18,16 +18,16 @@ void sinx_calc(float x)
     cout << "Начальное значение аргумента должно быть меньше 4" << endl;
   else
     {
-    float step_x = x;
-    float eps = {(4 - x) / 10};
-    step_x = step_x + eps;
-    int i = 0;
-    printf("%s\t\t %s\n", "x", "f(x)");
-    while (++i <= 10)
-      {
-        printf("%f\t %f\n", step_x, sin(step_x)/step_x);
-        step_x = step_x + eps;
-      }
+      float step_x = x;
+      float eps = {(4 - x) / 10};
+      int i = 0;
+      step_x = step_x + eps;
+      printf("%s\t\t %s\n", "x", "f(x)");
+      while (++i <= 10)
+        {
+          printf("%f\t %f\n", step_x, sin(step_x)/step_x);
+          step_x = step_x + eps;
+        }
     }
 }
 
@@ -50,11 +50,11 @@ void fib_calc(unsigned int max)
   unsigned int val2 = 1;
   while (sum < max)
     {
-    i = val1;
-    val1 = val2;
-    val2 = val2 + i;
-    ++n;
-    sum = sum + val2;
+      i = val1;
+      val1 = val2;
+      val2 = val2 + i;
+      ++n;
+      sum = sum + val2;
     }
   cout << "N: " << n << ", S: " << sum << endl; 
 }
@@ -81,11 +81,11 @@ void debt_calc(float debt, int time, float percent)
   printf("-----------------------------------------------------\n");
   while (current_time <= time)
     {
-    printf("%d\t %f\t %f\t %f\n", current_time, debt, current_percent, payment+current_percent);
-    debt = {debt - payment};
-    current_percent = {debt/100*percent};
-    percent_sum += current_percent;
-    ++current_time;
+      printf("%d\t %f\t %f\t %f\n", current_time, debt, current_percent, payment+current_percent);
+      debt = {debt - payment};
+      current_percent = {debt/100*percent};
+      percent_sum += current_percent;
+      ++current_time;
     }
   printf("-----------------------------------------------------\n");
   printf("%s %f\n", "Всего процентов:", percent_sum);
