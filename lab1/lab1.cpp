@@ -172,7 +172,8 @@ void create_array(void)
   struct element
     {
       int value;
-      struct element *prev, *next;
+      struct element *prev;
+      struct element *next;
     };
 
   element array [array_length];
