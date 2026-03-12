@@ -164,6 +164,7 @@ void merge_arrays(void)
 int main(void)
 {
   square_arrays();
+  printf("\n\n");
   merge_arrays();
   return 0;
 }
