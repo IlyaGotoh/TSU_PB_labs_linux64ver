@@ -24,5 +24,5 @@ else
 	
     printf %s "Компиляция $NAME_IN...   "; g++ -march=native $CURRENT_DIR/$PATH_IN -o $NAME_OUT \
 	&& echo "завершено ($NAME_IN -> bin/$NAME_MOVED)" && mv $CURRENT_DIR/$NAME_OUT $ROOT_DIR/bin/$NAME_MOVED \
-	&& echo -e "bin/$NAME_MOVED\n"; cd $ROOT_DIR/bin && $ROOT_DIR/bin/$NAME_MOVED
+	&& echo -e "bin/$NAME_MOVED\n" && cd $ROOT_DIR/bin && $ROOT_DIR/bin/$NAME_MOVED
 fi

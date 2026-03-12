@@ -160,11 +160,42 @@ void merge_arrays(void)
 }
 
 
+/*
+Напишите программу создания двусвязного самоадресуемого списка из 10-и элементов. В поле данных каждого элемента списка – порядковый номер
+этого элемента. В двусвязном списке каждый элемент содержит ссылки на предыдущий и последующий элементы.
+Вывод значений элементов списка выполните после построения списка.
+*/
+
+void create_array(void)
+{
+  const int array_length = 10;
+  struct element
+    {
+      int value;
+      struct element *prev, *next;
+    };
+
+  element array [array_length];
+
+  for (int i = 1; i <= array_length; i++)
+    {
+      if (i == 1) array[i-1].prev = NULL;
+      else array[i-1].prev = &array[i-2];
+
+      array[i-1].value = i;
+
+      if (i == array_length) array[i-1].next = NULL;
+      else array[i-1].next = &array[i];
+    }
+  for (int i = 0; i < array_length; i++) printf("Предыдущий: %d\tСледующий: %d\tЗначение: %d\n", array[i].prev, array[i].next, array[i].value);
+}
 
 int main(void)
 {
   square_arrays();
   printf("\n\n");
   merge_arrays();
+  printf("\n\n");
+  create_array();
   return 0;
 }
