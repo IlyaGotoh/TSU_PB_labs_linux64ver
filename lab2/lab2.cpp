@@ -63,7 +63,7 @@ int main(void)
 		}
 	}
 
-	for (int i = 0; i < 1000; i++)
+	for (int i = 0; i < n; i++)
 		printf("%d ", array[i]);
 	printf("\n\n");
 
@@ -76,7 +76,7 @@ int main(void)
 
 	int *unpacked = unpack(packed);
 
-	for (int i = 0; i < 1000; i++)
+	for (int i = 0; i < n; i++)
 		printf("%d ", unpacked[i]);
 	printf("\n");
 
