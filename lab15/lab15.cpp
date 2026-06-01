@@ -60,9 +60,9 @@ int main(void)
 		for (int w = 0; w < width_px; w++) {
 			if (h >= y2 && h <= y1) {
 				if (w >= x1 && w <= x2) {
-					int pr = pixel_arr[h][w][2] & 0xFF;
-					int pg = pixel_arr[h][w][1] & 0xFF;
-					int pb = pixel_arr[h][w][0] & 0xFF;
+					int pr = (unsigned char)pixel_arr[h][w][2];
+					int pg = (unsigned char)pixel_arr[h][w][1];
+					int pb = (unsigned char)pixel_arr[h][w][0];
 
 					if (pr == 0 && (mod_r != 1))
 						pr = 1;
