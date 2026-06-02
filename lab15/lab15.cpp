@@ -47,9 +47,10 @@ int main(void)
 	float mod_r, mod_g, mod_b;
 
 	cout << "Введите координаты x1, y1 (левый верхний угол), x2, y2 (правый нижнй) (>=1),\n";
-	cout << "модификаторы цвета R, G, B (0-255)\n";
 	cout << "(Декартова система координат)\n> ";
-	cin >> x1 >> y1 >> x2 >> y2 >> mod_r >> mod_g >> mod_b;
+	cin >> x1 >> y1 >> x2 >> y2;
+	cout << "модификаторы цвета R, G, B (0-255)\n> ";
+	cin  >> mod_r >> mod_g >> mod_b;
 	cout << "\n";
 	//x1 = 50; y1 = 300; x2 = 300; y2 = 50;
 	//cin >> mod_r >> mod_g >> mod_b;
