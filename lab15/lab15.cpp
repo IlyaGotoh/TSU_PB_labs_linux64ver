@@ -20,15 +20,17 @@ int main(void)
 	char header[HEADER_SIZE];
 	img_in.read(header, HEADER_SIZE);
 
-	cout << "Header:\n";
+	/*
+	cout << "Заголовок:\n";
 	for (int i = 0; i < HEADER_SIZE*2; i++)
 		cout << header[i] << " : ";
 	cout << "\n";
+	*/
 
 	int width_px = *(int*)&header[18];
 	int height_px = *(int*)&header[22];
 
-	cout << "Dimentions: " << width_px << "x" << height_px << "\n";
+	cout << "Размеры: " << width_px << "x" << height_px << "\n";
 
 	// 24 бит на пиксель, B8 G8 R8
 
