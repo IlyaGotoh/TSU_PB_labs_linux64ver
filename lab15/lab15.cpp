@@ -1,7 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <cstdlib>
-#include <cstdint>
 using namespace std;
 
 #define HEADER_SIZE 54
